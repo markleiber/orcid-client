@@ -1,0 +1,17 @@
+<template name="mainLayout">
+<head>
+<title>ORCID API Client</title>
+</head>
+<body>
+
+<div class="container">
+  {{> loginButtons }}
+  <div class="page-header">
+    <h1>ORCID API Client</h1>
+  </div>
+
+  {{> yield}}
+</div>
+
+</body>
+</template>

@@ -1,0 +1,23 @@
+<template name="home">
+
+{{#if isLoggedIn}}
+<div class="form-inline">
+  Public API methods and search: 
+  <button class="btn btn-primary orcidbio">GET orcid-bio</button>
+  <button class="btn btn-primary orcidworks">GET orcid-works</button>
+  <button class="btn btn-primary orcidprofile">GET orcid-profile</button>
+  /?q=<input class="form-control orcidsearchterm" type="text">
+  <button class="btn btn-info orcidsearch">Search</button>
+  <a href="http://members.orcid.org/api/tutorial-searching-api-12-and-earlier" target="_blank">search syntax</a>
+</div>
+
+<div class="form-group">
+  <label for="results">Results:</label>
+  <textarea class="form-control apiresults" rows="25" id="results"></textarea>
+</div>
+
+{{else}}
+You must be logged in to use the system.
+{{/if}}
+
+</template>
